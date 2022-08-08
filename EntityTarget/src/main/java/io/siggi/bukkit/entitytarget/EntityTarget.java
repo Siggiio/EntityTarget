@@ -174,7 +174,7 @@ public class EntityTarget extends JavaPlugin implements Listener {
 			return;
 		}
 		Entity controlledEntity = getControlledEntity(event.getPlayer());
-		if (controlledEntity == null || !(controlledEntity instanceof LivingEntity)) {
+		if (!(controlledEntity instanceof LivingEntity)) {
 			return;
 		}
 		LivingEntity le = (LivingEntity) controlledEntity;
