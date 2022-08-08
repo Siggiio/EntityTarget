@@ -3,16 +3,9 @@ package io.siggi.bukkit.entitytarget.nms;
 import net.minecraft.world.entity.EntityInsentient;
 import net.minecraft.world.entity.EntityLiving;
 import org.bukkit.craftbukkit.v1_18_R2.entity.CraftLivingEntity;
-import org.bukkit.entity.Entity;
 import org.bukkit.entity.LivingEntity;
-import org.bukkit.entity.Player;
 
 public class NMSUtil_v1_18_R2 extends NMSUtil<NMSUtil_v1_18_R2> {
-
-	@Override
-	public void updateTargets(Player p, Entity entity, String targets) {
-		p.sendMessage("Setting targets not supported on this version of Minecraft.");
-	}
 
 	@Override
 	public void setWalkDestination(LivingEntity entity, double x, double y, double z) {

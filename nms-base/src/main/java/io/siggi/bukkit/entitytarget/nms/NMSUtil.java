@@ -1,9 +1,7 @@
 package io.siggi.bukkit.entitytarget.nms;
 
 import org.bukkit.Bukkit;
-import org.bukkit.entity.Entity;
 import org.bukkit.entity.LivingEntity;
-import org.bukkit.entity.Player;
 
 public abstract class NMSUtil<N extends NMSUtil> {
 
@@ -26,6 +24,5 @@ public abstract class NMSUtil<N extends NMSUtil> {
 		version = version.substring(0, version.indexOf("."));
 		return version;
 	}
-	public abstract void updateTargets(Player p, Entity entity, String targets);
 	public abstract void setWalkDestination(LivingEntity entity, double x, double y, double z);
 }

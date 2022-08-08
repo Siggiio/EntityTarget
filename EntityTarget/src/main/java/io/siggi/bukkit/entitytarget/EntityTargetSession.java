@@ -15,6 +15,5 @@ public class EntityTargetSession {
 	}
 
 	public boolean choosingEntityToControl = false;
-	public String targetGoals = null;
 	public long lastClick = 0L;
 }

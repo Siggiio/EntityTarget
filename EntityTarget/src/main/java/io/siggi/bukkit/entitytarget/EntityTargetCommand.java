@@ -29,8 +29,6 @@ public class EntityTargetCommand implements CommandExecutor {
 					plugin.doWalkHere(player);
 				} else if (split[0].equalsIgnoreCase("tphere")) {
 					plugin.doTpHere(player);
-				} else {
-					plugin.target(player, split[0]);
 				}
 			} else if (split.length == 2) {
 				String pn = split[1];

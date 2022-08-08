@@ -111,19 +111,13 @@ public class EntityTarget extends JavaPlugin implements Listener {
 
 	public void target(Player player) {
 		EntityTargetSession session = getSession(player, true);
-		if (session.targetGoals != null || session.choosingEntityToControl) {
-			session.targetGoals = null;
+		if (session.choosingEntityToControl) {
 			session.choosingEntityToControl = false;
 			player.sendMessage("EntityTarget Cancelled.");
 		} else {
 			session.choosingEntityToControl = true;
 			player.sendMessage("Right click on the entity you wish to give instruction to.");
 		}
-	}
-
-	public void target(Player player, String str) {
-		getSession(player, true).targetGoals = str;
-		player.sendMessage("Right click on the entity you wish to change target goals for.");
 	}
 
 	public void doWalkHere(Player player) {
@@ -230,15 +224,6 @@ public class EntityTarget extends JavaPlugin implements Listener {
 				}
 				event.setCancelled(true);
 			}
-		} else if (session.targetGoals != null) {
-			session.lastClick = now;
-			event.setCancelled(true);
-			if (!(targetedEntity instanceof Creature)) {
-				p.sendMessage("You can't set a target for that entity!");
-			} else {
-				NMSUtil.get().updateTargets(p, targetedEntity, session.targetGoals);
-			}
-			session.targetGoals = null;
 		} else if (controlledEntity instanceof Creature) {
 			Creature attacker = (Creature) controlledEntity;
 			if (!(targetedEntity instanceof LivingEntity)) {
