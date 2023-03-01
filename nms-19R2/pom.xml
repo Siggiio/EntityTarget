@@ -10,11 +10,16 @@
     </parent>
 
     <groupId>io.siggi</groupId>
-    <artifactId>EntityTarget-nms-base</artifactId>
+    <artifactId>EntityTarget-nms-19R2</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <dependencies>
+        <dependency>
+            <groupId>io.siggi</groupId>
+            <artifactId>EntityTarget-nms-base</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
         <dependency>
             <groupId>org.spigotmc</groupId>
             <artifactId>spigot</artifactId>
