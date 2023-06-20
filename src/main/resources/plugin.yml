@@ -1,0 +1,16 @@
+name: EntityTarget
+main: io.siggi.bukkit.entitytarget.EntityTarget
+version: ${project.version}
+author: Siggi
+description: Tell an entity to target another.
+depend: [ CubeCore ]
+api-version: 1.13
+permissions:
+    entitytarget.target:
+        description: Allows the player to make an entity target another.
+        default: op
+commands:
+    entitytarget:
+        description: Make an entity target another.
+        usage: /<command>, then right click on Entity 1, and then on Entity 2 to make Entity 1 target Entity 2.
+        aliases: [et]
